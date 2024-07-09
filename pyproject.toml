@@ -1,0 +1,2 @@
+[tool.pylint.master]
+disable = ["R", "C", "fixme"]
