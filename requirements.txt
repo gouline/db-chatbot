@@ -1,5 +1,0 @@
-duckdb~=1.0.0
-dbt-duckdb~=1.8.1
-duckdb_engine~=0.13.0
-langchain~=0.2.7
-langchain-community~=0.2.7
