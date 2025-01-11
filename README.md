@@ -1,2 +1,3 @@
-# duck-jaffle-ai
-LLM playground with Jaffle Shop on DuckDB
+# db-chatbot
+
+Chatbot for querying structured data from a database.
