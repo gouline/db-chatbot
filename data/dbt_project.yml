@@ -1,9 +1,8 @@
-name: "jaffle_shop"
+name: "data"
+profile: "data"
 
 config-version: 2
 version: "0.1"
-
-profile: "jaffle_shop"
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
@@ -19,16 +18,8 @@ clean-targets:
 
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
-seeds:
-  +docs:
-    node_color: "#cd7f32"
-
 models:
-  jaffle_shop:
+  data:
     materialized: table
     staging:
       materialized: view
-      +docs:
-        node_color: "silver"
-    +docs:
-      node_color: "gold"

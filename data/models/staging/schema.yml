@@ -1,0 +1,72 @@
+models:
+  - name: stg_usa_states
+    columns:
+      - name: code
+        constraints:
+          - type: not_null
+          - type: primary_key
+
+      - name: state
+        constraints:
+          - type: not_null
+
+  - name: stg_purchases
+    columns:
+      - name: date
+        constraints:
+          - type: not_null
+
+      - name: price_per_unit
+        constraints:
+          - type: not_null
+
+      - name: quantity
+        constraints:
+          - type: not_null
+
+      - name: state_code
+        constraints:
+          - type: not_null
+          - type: foreign_key
+            to: ref('stg_usa_states')
+            to_columns: [code]
+
+      - name: title
+        constraints:
+          - type: not_null
+
+      - name: category
+        constraints:
+          - type: not_null
+
+  - name: stg_stores
+    columns:
+      - name: open_date
+        constraints:
+          - type: not_null
+
+      - name: address
+        constraints:
+          - type: not_null
+
+      - name: city
+        constraints:
+          - type: not_null
+
+      - name: state_code
+        constraints:
+          - type: not_null
+
+      - name: zip_code
+        constraints:
+          - type: not_null
+          - type: foreign_key
+            to: ref('stg_usa_states')
+            to_columns: [code]
+
+      - name: type
+        constraints:
+          - type: not_null
+        data_tests:
+          - accepted_values:
+              values: ["Supercenter", "Wal-Mart"]

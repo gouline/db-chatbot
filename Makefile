@@ -1,3 +1,3 @@
-dbt:
-	( cd dbt && dbt seed && dbt run )
-.PHONY: dbt
+data:
+	( cd data && dbt seed && dbt run )
+.PHONY: data

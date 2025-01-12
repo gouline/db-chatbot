@@ -1,0 +1,18 @@
+models:
+  - name: purchases
+    columns:
+      - name: date
+      - name: price_per_unit
+      - name: quantity
+      - name: title
+      - name: category
+      - name: state
+
+  - name: stores
+    columns:
+      - name: open_date
+      - name: address
+      - name: city
+      - name: state_code
+      - name: type
+      - name: state
