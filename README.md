@@ -1,3 +1,3 @@
-# db-chatbot
+# sql-chatbot
 
-Chatbot for querying structured data from a database.
+Chatbot for querying structured data from an SQL database.
